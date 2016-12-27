@@ -20,3 +20,9 @@ end
 function love.draw()
   screen:draw()
 end
+
+function love.keypressed( key, scancode, isrepeat )
+  if screen.keypressed then
+    screen:keypressed( key, scancode, isrepeat )
+  end
+end

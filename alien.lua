@@ -12,10 +12,11 @@ function alien:initialize (type, x, y)
   self.sprite = alien.alien_sprites.sheets[type][self._frame]
 end
 
-function alien:draw (canvas)
-  if canvas then love.graphics.setCanvas(canvas) end
+function alien:draw ()
+  --if canvas then love.graphics.setCanvas(canvas) end
+  love.graphics.setBackgroundColor(1, 0, 0)
   love.graphics.draw(alien.alien_sprites.sheet, self.sprite, self.x, self.y)
-  love.graphics.setCanvas()
+  --love.graphics.setCanvas()
 end
 
 function alien:update ()
