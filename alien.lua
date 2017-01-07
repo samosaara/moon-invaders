@@ -14,6 +14,9 @@ end
 
 function alien:draw ()
   --if canvas then love.graphics.setCanvas(canvas) end
+  if self.disable then
+    return
+  end
   love.graphics.setBackgroundColor(1, 0, 0)
   love.graphics.draw(alien.alien_sprites.sheet, self.sprite, self.x, self.y)
   --love.graphics.setCanvas()
